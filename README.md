@@ -74,6 +74,7 @@ RP Pico 一站式开发工具
 - 树莓派 Pico W / Pico WH
 - 树莓派 Pico 2（RP2350）
 - 所有兼容 RP2040 / RP2350 的第三方开发板
+- 
 🛠 开发环境与编译说明
 本工具基于Qt开发，仅适配Windows 64位系统，可通过Qt Creator编译构建，工具运行依赖官方Pico SDK基础环境：
 1. 提前下载官方 .pico-sdk 文件夹（内置SDK、CMAKE、PICOtool等全套开发工具）
