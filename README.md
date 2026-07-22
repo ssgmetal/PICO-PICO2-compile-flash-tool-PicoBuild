@@ -11,6 +11,7 @@
 
 RP Pico All-in-One Development Tool
 A Qt-based graphical desktop tool exclusively designed for Windows 64-bit systems, dedicated to Raspberry Pi Pico series (RP2040 / RP2350) development. It supports independent project creation and management, local offline compilation, one-click firmware flashing, and serial port debugging with full visual operation and zero command-line input required. Seamlessly integrated with VSCode and fully compatible with the official Raspberry Pi Pico SDK ecosystem, it greatly lowers the embedded development threshold and improves development efficiency for both beginners and experienced developers.
+
 ✨ Core Features
 - Independent Project Management – Create brand-new Pico projects or open existing local projects freely for full project management
 - Local Offline Compilation – Compile Pico C/C++ projects locally with pure graphical operations, no command-line operations needed
@@ -22,12 +23,13 @@ A Qt-based graphical desktop tool exclusively designed for Windows 64-bit system
 - Serial Port Debug Console – Real-time log viewing, serial port monitoring and device data parsing for convenient program debugging
 - Firmware Batch Management – Supports preview, classification management and batch flashing of multiple UF2 firmware files
 - Dedicated System Optimization – Deeply optimized and fully compatible with Windows 64-bit operating system for stable operation
-- 
+
 🎯 Supported Chips & Boards
 - Raspberry Pi Pico (RP2040)
 - Raspberry Pi Pico W / Pico WH
 - Raspberry Pi Pico 2 (RP2350)
 - All third-party compatible RP2040 / RP2350 boards
+
 🛠 Build & Environment Instructions
 This Qt-based application only supports Windows 64-bit systems. You can compile and build the project via Qt Creator. The tool depends on the official Pico SDK environment:
 1. Download the official .pico-sdk folder (contains complete SDK, CMake, Picotool and other essential development tools)
@@ -35,14 +37,14 @@ This Qt-based application only supports Windows 64-bit systems. You can compile 
 3. Select your installed SDK version (2.2.0 / 2.3.0) and click the configure button to initialize the development environment
 4. Source code compilation: Install Qt 5.15+ or Qt 6, clone the repository and open the .pro project file in Qt Creator
 5. Configure the build kit and compile the project to launch the application
-6. 
+
 📦 User Guide
 1. Environment Setup: Prepare the official .pico-sdk folder (2.2.0 / 2.3.0). Let the tool auto-scan the path or add it manually, then click configure to activate the environment
 2. Project Creation & Opening: Create new blank Pico projects or open existing local project folders directly
 3. Code Development: Open the tool-generated project folder with VSCode. The built-in JSON files will be loaded automatically to enable full code hints and syntax auto-completion
 4. Local Compilation: Compile the project offline with one click inside the tool to generate standard UF2 firmware
 5. Firmware Flashing & Debugging: Connect your Pico board via USB, flash the compiled firmware, and start real-time serial port debugging
-6. 
+
 💡 Advantages
 Traditional Raspberry Pi Pico development requires complicated command-line operations and tedious manual VSCode plugin configuration, creating a high learning barrier for beginners. This tool provides a full-graphical, zero-CLI Windows development solution, covering project management, environment configuration, local compilation and firmware flashing. It reuses the official standard Pico SDK system, balancing official development specifications and user-friendly visual operations, greatly improving development efficiency for all users.
 📄 License
