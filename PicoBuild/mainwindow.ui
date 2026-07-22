@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PicoBuild - Raspberry Pi Pico MCU</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow { background-color: #ffffff; }
+QGroupBox { color: #1a5276; font-weight: bold; border: 1px solid #b0b0b0; border-radius: 6px; margin-top: 12px; padding-top: 8px; background-color: #f5f5f5; }
+QGroupBox::title { subcontrol-origin: margin; left: 12px; padding: 0 6px; background-color: #f5f5f5; }
+QLabel { color: #1a1a1a; }
+QLineEdit { background-color: #ffffff; color: #1a1a1a; border: 1px solid #b0b0b0; border-radius: 4px; padding: 4px 8px; }
+QLineEdit:focus { border-color: #0078d4; }
+QComboBox { background-color: #ffffff; color: #1a1a1a; border: 1px solid #b0b0b0; border-radius: 4px; padding: 4px 8px; min-width: 120px; }
+QComboBox:hover { border-color: #0078d4; }
+QComboBox QAbstractItemView { background-color: #ffffff; color: #1a1a1a; selection-background-color: #0078d4; selection-color: white; }
+QTextEdit { background-color: #ffffff; color: #1a1a1a; border: 1px solid #b0b0b0; border-radius: 4px; }
+QProgressBar { border: 1px solid #b0b0b0; border-radius: 4px; background-color: #e8e8e8; text-align: center; color: #1a1a1a; }
+QProgressBar::chunk { background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #107c10, stop:1 #4ec94e); border-radius: 3px; }
+QStatusBar { background-color: #e8e8e8; color: #1a1a1a; border-top: 1px solid #b0b0b0; }
+QListWidget { background-color: #ffffff; color: #1a1a1a; border: 1px solid #b0b0b0; border-radius: 4px; }
+QScrollArea { border: none; background: transparent; }
+QCheckBox { color: #1a1a1a; spacing: 6px; }
+QCheckBox::indicator { width: 16px; height: 16px; }
+QCheckBox::indicator:unchecked { border: 1px solid #b0b0b0; border-radius: 3px; background-color: #ffffff; }
+QCheckBox::indicator:checked { border: 1px solid #0078d4; border-radius: 3px; background-color: #0078d4; }</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing"><number>8</number></property>
+    <item>
+     <layout class="QHBoxLayout" name="projectBarLayout">
+      <item>
+       <widget class="QPushButton" name="btnNewProject">
+        <property name="text"><string>新建工程</string></property>
+        <property name="minimumSize"><size><width>110</width><height>40</height></size></property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton { background-color: #107c10; color: white; font-weight: bold; font-size: 13px; border-radius: 5px; padding: 8px 14px; } QPushButton:hover { background-color: #1a8c1a; } QPushButton:pressed { background-color: #0b5e0b; }</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnOpenProject">
+        <property name="text"><string>打开工程</string></property>
+        <property name="minimumSize"><size><width>110</width><height>40</height></size></property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton { background-color: #0078d4; color: white; font-weight: bold; font-size: 13px; border-radius: 5px; padding: 8px 14px; } QPushButton:hover { background-color: #1a8cd8; } QPushButton:pressed { background-color: #005a9e; }</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="toolbarSpacer">
+        <property name="orientation"><enum>Qt::Horizontal</enum></property>
+        <property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelSourceDir">
+        <property name="text"><string></string></property>
+        <property name="styleSheet"><string notr="true">color: #1a5276; font-size: 11px; padding: 4px 8px; border: 1px solid #b0b0b0; border-radius: 4px; background-color: #f0f0f0; font-weight: bold;</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelCurrentProject">
+        <property name="text"><string>未打开工程</string></property>
+        <property name="styleSheet"><string notr="true">color: #888; font-size: 12px; padding: 4px 8px;</string></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxMcpu">
+      <property name="title"><string>芯片配置</string></property>
+      <layout class="QHBoxLayout" name="horizontalLayoutMcpu">
+       <item>
+        <widget class="QLabel" name="labelPlatform"><property name="text"><string>MCU:</string></property></widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelPlatformValue">
+         <property name="text"><string>-</string></property>
+         <property name="styleSheet"><string notr="true">color: #1a5276; font-weight: bold; font-size: 13px; padding: 4px 8px; border: 1px solid #b0b0b0; border-radius: 4px; background-color: #f0f0f0; min-width: 120px;</string></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelBuildType"><property name="text"><string>构建类型</string></property></widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBuildType">
+         <item><property name="text"><string>Release</string></property></item>
+         <item><property name="text"><string>Debug</string></property></item>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacerMcpu">
+         <property name="orientation"><enum>Qt::Horizontal</enum></property>
+         <property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxActions">
+      <property name="title"><string>操作</string></property>
+      <layout class="QHBoxLayout" name="horizontalLayoutActions">
+       <item>
+        <widget class="QPushButton" name="btnBuild">
+         <property name="text"><string>编译 [F1]</string></property>
+         <property name="minimumSize"><size><width>110</width><height>40</height></size></property>
+         <property name="styleSheet"><string notr="true">QPushButton { background-color: #107c10; color: white; font-weight: bold; font-size: 13px; border-radius: 5px; padding: 8px 14px; } QPushButton:hover { background-color: #1a8c1a; } QPushButton:pressed { background-color: #0b5e0b; } QPushButton:disabled { background-color: #555; color: #999; }</string></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnFlash">
+         <property name="text"><string>下载 [F2]</string></property>
+         <property name="minimumSize"><size><width>110</width><height>40</height></size></property>
+         <property name="styleSheet"><string notr="true">QPushButton { background-color: #7c3aed; color: white; font-weight: bold; font-size: 13px; border-radius: 5px; padding: 8px 14px; } QPushButton:hover { background-color: #8b5cf6; } QPushButton:pressed { background-color: #6d28d9; } QPushButton:disabled { background-color: #555; color: #999; }</string></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnConfigure">
+         <property name="text"><string>配置 [F3]</string></property>
+         <property name="minimumSize"><size><width>110</width><height>40</height></size></property>
+         <property name="styleSheet"><string notr="true">QPushButton { background-color: #0078d4; color: white; font-weight: bold; font-size: 13px; border-radius: 5px; padding: 8px 14px; } QPushButton:hover { background-color: #1a8cd8; } QPushButton:pressed { background-color: #005a9e; } QPushButton:disabled { background-color: #555; color: #999; }</string></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnClean">
+         <property name="text"><string>清理工程 [F4]</string></property>
+         <property name="minimumSize"><size><width>110</width><height>40</height></size></property>
+         <property name="styleSheet"><string notr="true">QPushButton { background-color: #ca5010; color: white; font-weight: bold; font-size: 13px; border-radius: 5px; padding: 8px 14px; } QPushButton:hover { background-color: #d45d1a; } QPushButton:pressed { background-color: #a0400d; } QPushButton:disabled { background-color: #555; color: #999; }</string></property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="spacerBeforeConfig">
+         <property name="orientation"><enum>Qt::Horizontal</enum></property>
+         <property name="sizeType"><enum>QSizePolicy::Fixed</enum></property>
+         <property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnProjectConfig">
+         <property name="text"><string>工程配置 [F8]</string></property>
+         <property name="minimumSize"><size><width>110</width><height>40</height></size></property>
+         <property name="styleSheet"><string notr="true">QPushButton { background-color: #d4a017; color: white; font-weight: bold; font-size: 13px; border-radius: 5px; padding: 8px 14px; } QPushButton:hover { background-color: #e0b030; } QPushButton:pressed { background-color: #b0880f; }</string></property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacerActions">
+         <property name="orientation"><enum>Qt::Horizontal</enum></property>
+         <property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnAbout">
+         <property name="text"><string>ABOUT</string></property>
+         <property name="minimumSize"><size><width>110</width><height>40</height></size></property>
+         <property name="styleSheet"><string notr="true">QPushButton { background-color: #3a3a3a; color: #d4d4d4; font-weight: bold; font-size: 13px; border-radius: 5px; padding: 8px 14px; border: 1px solid #505050; } QPushButton:hover { background-color: #505050; color: #ffffff; } QPushButton:pressed { background-color: #2d2d2d; }</string></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnExit">
+         <property name="text"><string>EXIT</string></property>
+         <property name="minimumSize"><size><width>110</width><height>40</height></size></property>
+         <property name="styleSheet"><string notr="true">QPushButton { background-color: #8b0000; color: white; font-weight: bold; font-size: 13px; border-radius: 5px; padding: 8px 14px; } QPushButton:hover { background-color: #a00000; } QPushButton:pressed { background-color: #600000; }</string></property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxOutput">
+      <property name="title"><string>输出</string></property>
+      <layout class="QVBoxLayout" name="verticalLayoutOutput">
+       <item>
+        <widget class="QTextEdit" name="textEditOutput">
+         <property name="readOnly"><bool>true</bool></property>
+         <property name="font"><font><family>Consolas</family><pointsize>12</pointsize></font></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar">
+         <property name="value"><number>0</number></property>
+         <property name="textVisible"><bool>false</bool></property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry"><rect><x>0</x><y>0</y><width>960</width><height>21</height></rect></property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet"><string notr="true">QStatusBar::item { border: none; }</string></property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
