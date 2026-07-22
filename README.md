@@ -1,3 +1,12 @@
+<p align="center">
+  <img width="800" src="1.png">
+</p>
+<p align="center">
+  <img width="800" src="2.png">
+</p>
+
+# RP Pico All-in-One Development Tool
+......剩下原有内容......
 RP Pico All-in-One Development Tool
 A Qt-based graphical desktop tool exclusively designed for Windows 64-bit systems, dedicated to Raspberry Pi Pico series (RP2040 / RP2350) development. It supports independent project creation and management, local offline compilation, one-click firmware flashing, and serial port debugging with full visual operation and zero command-line input required. Seamlessly integrated with VSCode and fully compatible with the official Raspberry Pi Pico SDK ecosystem, it greatly lowers the embedded development threshold and improves development efficiency for both beginners and experienced developers.
 ✨ Core Features
