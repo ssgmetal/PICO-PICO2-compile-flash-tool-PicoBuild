@@ -35,6 +35,8 @@ The executable in the Releases version defaults to Chinese language. You may swi
 
 Your language selection will be saved in the INI configuration file and loaded automatically on the next launch.
 
+
+sha256:a5fb39b14755e27b3e0a886188e34855facad13a249cba91f0d0768e8fef5701
 ***
 
 ✨ Core Features
