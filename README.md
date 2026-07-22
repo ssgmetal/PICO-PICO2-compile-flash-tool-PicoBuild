@@ -55,7 +55,7 @@ Users take full responsibility for all hardware and software projects developed 
 
 🤝 Contribution
 Pull requests, issues, and feature suggestions are highly welcome!
-If you have cooperation or technical communication needs, you can contact me via email:
+you can contact me via email:
 [ssgmetal@163.com](mailto:ssgmetal@163.com)
 Let’s build a better RP2040/RP2350 open-source development ecosystem together.
 =============================================================================================================================================================================================================================================================================
