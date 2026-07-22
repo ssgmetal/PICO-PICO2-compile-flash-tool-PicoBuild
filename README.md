@@ -20,8 +20,6 @@ A Qt-based graphical desktop tool exclusively designed for Windows 64-bit system
 - Native Official SDK Compatibility – Fully compliant with the official Raspberry Pi VSCode SDK system. Only a .pico-sdk folder is required, which integrates complete development components including SDK, CMake, Picotool and more
 - Multi-SDK Version Support – Natively supports official stable SDK versions: 2.2.0 and 2.3.0, covering mainstream Pico development versions
 - Smart SDK Path Configuration – Automatically scans for the local .pico-sdk directory. Manual path selection is supported if auto-scan fails, with one-click environment initialization
-- Serial Port Debug Console – Real-time log viewing, serial port monitoring and device data parsing for convenient program debugging
-- Firmware Batch Management – Supports preview, classification management and batch flashing of multiple UF2 firmware files
 - Dedicated System Optimization – Deeply optimized and fully compatible with Windows 64-bit operating system for stable operation
 
 🎯 Supported Chips & Boards
