@@ -8,6 +8,11 @@
 
 # RP Pico All-in-One Development Tool
 
+I am a big fan of Raspberry Pi Pico and Pico 2. These microcontrollers are incredibly capable.
+However, I ran into numerous difficulties while working with the official development environment, which made MCU development a frustrating experience.
+For this reason, I have built a GUI application that runs on Windows. It delivers simpler, more intuitive visual operations for environment configuration, project compilation, firmware flashing and more.
+This tool is created for fellow Raspberry Pi embedded enthusiasts to make working with the RP2040 and RP2350 much easier.
+It is non-commercial.
 
 RP Pico All-in-One Development Tool
 A Qt-based graphical desktop tool exclusively designed for Windows 64-bit systems, dedicated to Raspberry Pi Pico series (RP2040 / RP2350) development. It supports independent project creation and management, local offline compilation, one-click firmware flashing, and serial port debugging with full visual operation and zero command-line input required. Seamlessly integrated with VSCode and fully compatible with the official Raspberry Pi Pico SDK ecosystem, it greatly lowers the embedded development threshold and improves development efficiency for both beginners and experienced developers.
