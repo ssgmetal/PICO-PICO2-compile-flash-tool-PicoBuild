@@ -46,6 +46,9 @@ https://github.com/ssgmetal/PICO-PICO2-compile-flash-tool-PicoBuild/releases/dow
 PicoBuild_64_bit-Release_V2.1.6
 https://github.com/ssgmetal/PICO-PICO2-compile-flash-tool-PicoBuild/releases/download/pico-sdk/PicoBuild_64_bit-Release_V2.1.6.zip
 
+PicoBuild_64_bit-Release_V2.1.7
+https://github.com/ssgmetal/PICO-PICO2-compile-flash-tool-PicoBuild/releases/download/pico-sdk/PicoBuild_64_bit-Release_V2.1.7.zip
+
 ***
 
 ✨ Core Features
